@@ -8,14 +8,20 @@ public class DemoQaSteps {
 	FormPage formPage=new FormPage();
 	
 	public void validate_demoQAIsCorrectlyLaunched(){
-		demoQAHomePage.launchPage();
-		demoQAHomePage.validateTitleIsCorrect();
+		String title="test";
+		demoQAHomePage.demQA_HomePage_launchPage();
+		demoQAHomePage.demoQA_HomePage_validateTitleIsCorrect(title);
 		
 	}
 	
-	public void validate_ClickOnRegisterButtonAndFillInForm(){
-		demoQAHomePage.clickOnRegisterButton();
+	public void validate_ClickOnRegisterButton(){
+		demoQAHomePage.demoQA_clickOnRegisterButton();
 		
 	}
-
+    
+	public void validate_CorrectNavigationToFormPage_and_FillInForm(){
+		String title="test";
+		formPage.formPage_validateCorrectTitle(title);
+		formPage.formPage_fillInForm();
+	}
 }
